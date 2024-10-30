@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure--gm-_qqm(tkw&p@fde(wo+sctl@xb)p5$b^7s1&*9bs^9*yc42
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'bincom-election-test-jv7c.onrender.com']
 
 # Application definition
 
