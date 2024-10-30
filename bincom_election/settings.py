@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -92,6 +93,13 @@ DATABASES = {
         'HOST': config('DB_HOST'),
         'PORT': config('DB_PORT'),
     }
+}
+
+
+DATABASES = {
+    'default': dj_database_url.parse(
+        'postgresql://bincom_eletion_database_user:rAi8ODwGO6N3WSGR7xfoRS82zBTU4Gp2@dpg-csgurg8gph6c73bt0o6g-a.oregon-postgres.render.com/bincom_eletion_database'
+    )
 }
 
 
