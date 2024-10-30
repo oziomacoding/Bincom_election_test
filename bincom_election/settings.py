@@ -22,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure--gm-_qqm(tkw&p@fde(wo+sctl@xb)p5$b^7s1&*9bs^9*yc42'
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config("DEBUG", cast=bool)
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'bincom-election-test-jv7c.onrender.com']
 
@@ -98,7 +98,7 @@ DATABASES = {
 
 DATABASES = {
     'default': dj_database_url.parse(
-        'postgresql://bincom_eletion_database_user:rAi8ODwGO6N3WSGR7xfoRS82zBTU4Gp2@dpg-csgurg8gph6c73bt0o6g-a.oregon-postgres.render.com/bincom_eletion_database'
+        config("DATABASE_URL")
     )
 }
 
